@@ -1,0 +1,168 @@
+@use 'variables'as *;
+
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+ 
+  // Output standard non-prefixed declaration
+  #{$property}: $value;
+}
+
+/* OVERRIDES */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+/* GENERAL */
+html {
+  background-color: $background;
+}
+
+body {
+  font-family: $defaultFont;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 90%;
+  height: auto;
+}
+
+/* HEADER/NAV */
+header {
+  background-color: $blue;
+  text-align: right;
+  padding: 2em;
+}
+
+hr {
+  width: 100%;
+}
+
+header {
+  h1 {
+    margin: 0;
+
+    a {
+      color: white;
+    }
+  }
+
+
+}
+
+h1,
+h2 {
+  font-family: $headerFont;
+  font-size: 1.75em;
+}
+
+nav ul li {
+  list-style: none;
+  padding: 0.5em 0;
+}
+
+nav ul li {
+
+  a,
+  a:visited {
+    color: $background;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: white;
+  }
+
+  a:active {
+    text-decoration: underline;
+    color: var(--active);
+  }
+}
+
+/* BODY */
+h2 {
+  margin: 0.25em 0 2em 0;
+
+  >a {
+    color: black;
+
+    &:active {
+      color: $active;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+article {
+  padding: 1em;
+  margin: 1.75em 1em;
+  background-color: white;
+  box-shadow: 2px 2px 5px gray;
+}
+
+.post-date {
+  color: gray;
+  font-size: 0.9em;
+}
+
+section>p {
+  font-size: 0.9em;
+
+  > a {
+    color: black;
+
+    &:active {
+      color: $active;
+    }
+
+    &:hover {
+      color: $blue;
+      text-decoration: underline;
+    }
+  }
+}
+
+.test-Mixin {
+  @include prefix(display, flex, webkit ms)
+}
+
+/* Media Queries */
+@media screen and (min-width: 580px) {
+  body>div {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+  }
+
+  header {
+    grid-column: 1;
+    position: fixed;
+    height: 100%;
+    width: 250px;
+  }
+
+  main {
+    grid-column: 2;
+    text-align: center;
+  }
+
+  article {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
