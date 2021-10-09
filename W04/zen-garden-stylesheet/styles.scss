@@ -1,0 +1,42 @@
+// Imports
+@use "atoms" as *;
+@use "molecules" as *;
+
+
+// Styleguide Specific Styling
+html {
+  background-color: white;
+}
+
+body {
+  max-width: 70%;
+  margin: auto;
+}
+
+section, header {
+  //background-color: $background;
+  //background-color: #2e4052;
+  padding: .5em 2em 2em 2em;
+  margin: 1em auto;
+  border-radius: 20px ;
+  border: #2e4052 1px solid;
+}
+
+.fontExample {
+  font-size: 2em;
+}
+
+.headingExample {
+  font-weight: $headingWeight;
+}
+
+img {
+  max-width: 80%;
+  height: auto;
+}
+
+
+
+
+
+
