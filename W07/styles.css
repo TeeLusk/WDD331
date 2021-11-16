@@ -1,0 +1,30 @@
+.card {
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid;
+  border-radius: 5px;
+  width: 320px;
+  overflow: hidden;
+  box-shadow: 1px 1px 4px 1px #888;
+}
+.card__body {
+  padding: 1em;
+}
+.card__tagList {
+  list-style: none;
+  display: flex;
+  padding-left: 0;
+  padding-right: 1em;
+}
+.card__title {
+  font-size: 2em;
+  font-weight: bolder;
+}
+.card__date {
+  color: #888;
+  margin-top: -1.5em;
+  font-size: 1.25em;
+  font-weight: lighter;
+}
+
+/*# sourceMappingURL=styles.css.map */

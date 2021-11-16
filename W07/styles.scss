@@ -1,0 +1,45 @@
+$light-gray: #888;
+
+.card {
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid;
+  border-radius: 5px;
+  width: 320px;
+  overflow: hidden;
+  box-shadow: 1px 1px 4px 1px $light-gray;
+
+  &__body {
+    padding: 1em;
+  }
+
+  &__tagList {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    padding-right: 1em;
+  }
+
+  &__title {
+    font-size: 2em;
+    font-weight: bolder;
+  }
+
+  &__date {
+    color: $light-gray;
+    margin-top: -1.5em;
+    font-size: 1.25em;
+    font-weight: lighter;
+  }
+  //
+  //@media screen and (min-width: 500px) {
+  //  display: flex;
+  //  flex-direction: row-reverse;
+  //  max-width: 500px;
+  //
+  //  &__img {
+  //    width: 30%;
+  //  }
+  //}
+
+}
