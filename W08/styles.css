@@ -1,0 +1,70 @@
+html {
+  margin: 0;
+  background: #f8f9fa;
+}
+
+body {
+  font-family: helvetica, arial, sans-serif;
+}
+
+.card {
+  margin: auto;
+  padding: 1em;
+  height: 450px;
+  width: 300px;
+}
+
+.card__header, .card__item, .card__total, .card__item-promo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card__header h4, .card__header p, .card__item h4, .card__item p, .card__total h4, .card__total p, .card__item-promo h4, .card__item-promo p {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+.card__header {
+  align-items: center;
+}
+.card__header-itemCount {
+  color: white;
+  background-color: #4e555b;
+  border-radius: 10px;
+  padding: 0.5em;
+}
+
+.card__item {
+  border-radius: 5px;
+  border: gray 0.1px solid;
+  padding: 0.75em;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card__item h4, .card__item p {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+.card__item-promo {
+  color: green;
+}
+.card__item-promoCode {
+  margin-top: 1em;
+}
+.card__item-promoCode input {
+  padding: 0.75em;
+  margin: 0;
+  width: 80%;
+}
+.card__item-promoCode button {
+  background-color: #6c757d;
+  color: white;
+}
+
+.card__total .card__item-right-total {
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=styles.css.map */
